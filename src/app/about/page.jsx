@@ -24,11 +24,11 @@ const AboutPage = () => {
           <div className="flex flex-col gap-12">
             <h1 className="font-bold text-2xl">BIOGRAPHY</h1>
             <p className="text-lg">
-              As a frontend developer and UI designer, I'm dedicated to creating
-              seamless digital experiences. I focus on user-centric design
-              principles to craft elegant interfaces that blend aesthetics with
-              functionality. My passion lies in shaping the digital landscape
-              with purpose and innovation.
+              As a frontend developer and UI designer, I am dedicated to
+              creating seamless digital experiences. I focus on user-centric
+              design principles to craft elegant interfaces that blend
+              aesthetics with functionality. My passion lies in shaping the
+              digital landscape with purpose and innovation.
             </p>
             <span className="italic">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
