@@ -1,13 +1,18 @@
 "use client";
 
 import React, { useRef } from "react";
-import { motion, useScroll } from "framer-motion";
+import { delay, motion, useInView, useScroll } from "framer-motion";
 import Brain from "../components/Brain";
 
 const AboutPage = () => {
   const containerRef = useRef();
-
   const { scrollYProgress } = useScroll({ container: containerRef });
+
+  const skillRef = useRef();
+  const isSkillRefInView = useInView(skillRef, { margin: "-100px" });
+
+  const experienceRef = useRef();
+  const isExperienceRefInView = useInView(experienceRef, { margin: "-100px" });
 
   return (
     <motion.div
@@ -74,44 +79,68 @@ const AboutPage = () => {
             </motion.svg>
           </div>
           {/* SKILLS */}
-          <div className="flex flex-col gap-12 justify-center">
-            <h1 className="font-bold text-2xl">SKILLS</h1>
+          <div className="flex flex-col gap-12 justify-center" ref={skillRef}>
+            <motion.h1
+              initial={{ x: "-300px" }}
+              animate={isSkillRefInView ? { x: 0 } : {}}
+              transition={{ delay: 0.2 }}
+              className="font-bold text-2xl"
+            >
+              SKILLS
+            </motion.h1>
             {/* SKILL LIst */}
-            <div className="flex gap-4 flex-wrap">
+            <motion.div
+              initial={{ x: "-300px" }}
+              animate={isSkillRefInView ? { x: 0 } : {}}
+              transition={{ delay: 0.05 }}
+              className="flex gap-4 flex-wrap"
+            >
               <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 JavaScript
               </div>
               <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                JavaScript
+                ReactJS
               </div>
               <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                JavaScript
+                ExpressJS
               </div>
               <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                JavaScript
+                JAVA
               </div>
               <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                JavaScript
+                NestJS
               </div>
               <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                JavaScript
+                MongoDB
               </div>
               <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                JavaScript
+                SQL
               </div>
               <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                JavaScript
+                GIT
               </div>
               <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                JavaScript
+                Github
               </div>
               <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                JavaScript
+                Docker
               </div>
               <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                JavaScript
+                Tailwind CSS
               </div>
-            </div>
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                HTML
+              </div>
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                CSS
+              </div>
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                C++
+              </div>
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                JAVA
+              </div>
+            </motion.div>
 
             <motion.svg
               initial={{ opacity: 0.2, y: 0 }}
@@ -138,78 +167,92 @@ const AboutPage = () => {
           </div>
           {/* EXPERIENCE */}
           <div className="flex flex-col  justify-center pb-48">
-            <h1 className="font-bold text-2xl">EXPERIENCE</h1>
+            <motion.h1
+              initial={{ x: "-300px" }}
+              animate={isExperienceRefInView ? { x: "0px" } : {}}
+              transition={{ delay: 0.2 }}
+              className="font-bold text-2xl py-4"
+              ref={experienceRef}
+            >
+              EXPERIENCE
+            </motion.h1>
 
-            {/* EXPERIENCE LIST ITEM */}
-            <div className="flex justify-between h-48">
-              {/* LEFT */}
-              <div className="w-1/3">
-                {/* JOB TITLE */}
-                <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
-                  Senior JavaScript Engineer
+            <motion.div
+              initial={{ x: "-300px" }}
+              animate={isExperienceRefInView ? { x: "0px" } : {}}
+              transition={{ delay: 0.05 }}
+              className=""
+            >
+              {/* EXPERIENCE LIST ITEM */}
+              <div className="flex justify-between h-48">
+                {/* LEFT */}
+                <div className="w-1/3">
+                  {/* JOB TITLE */}
+                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
+                    Software Developer Intern
+                  </div>
+                  {/* JOB DESC */}
+                  <div className="p-3 text-sm italic">
+                    led web development, offering expertise in JavaScript
+                    frameworks.
+                  </div>
+                  {/* JOB DATA */}
+                  <div className="p-3 text-sm text-red-400 font-semibold">
+                    2023-June to Nov
+                  </div>
+                  {/* JOB COMPANY */}
+                  <div className="p-1 bg-white text-sm rounded-lg font-semibold w-fit">
+                    Misemind Technologies
+                  </div>
                 </div>
-                {/* JOB DESC */}
-                <div className="p-3 text-sm italic">
-                  led web development, offering expertise in JavaScript
-                  frameworks.
+
+                {/* CENTER */}
+                <div className="w-1/6">
+                  {/* LINE */}
+                  <div className=" relative w-1 h-full bg-gray-600">
+                    {/* LINE CIRCLE */}
+                    <div className="w-5 h-5 absolute ring-4 bg-white ring-red-400 rounded-full -left-2 "></div>
+                  </div>
                 </div>
-                {/* JOB DATA */}
-                <div className="p-3 text-sm text-red-400 font-semibold">
-                  2024-Present
-                </div>
-                {/* JOB COMPANY */}
-                <div className="p-1 bg-white text-sm rounded-lg font-semibold w-fit">
-                  Apple
-                </div>
+
+                {/* RIGHT */}
+                <div className="w-1/3"></div>
               </div>
 
-              {/* CENTER */}
-              <div className="w-1/6">
-                {/* LINE */}
-                <div className=" relative w-1 h-full bg-gray-600">
-                  {/* LINE CIRCLE */}
-                  <div className="w-5 h-5 absolute ring-4 bg-white ring-red-400 rounded-full -left-2 "></div>
+              <div className="flex justify-between h-48">
+                {/* LEFT */}
+                <div className="w-1/3"></div>
+
+                {/* CENTER */}
+                <div className="w-1/6">
+                  {/* LINE */}
+                  <div className=" relative w-1 h-full bg-gray-600">
+                    {/* LINE CIRCLE */}
+                    <div className="w-5 h-5 absolute ring-4 bg-white ring-red-400 rounded-full -left-2 "></div>
+                  </div>
+                </div>
+
+                {/* RIGHT */}
+                <div className="w-1/3">
+                  {/* JOB TITLE */}
+                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
+                    Fullstack Web Developer
+                  </div>
+                  {/* JOB DESC */}
+                  <div className="p-3 text-sm italic">
+                    Building react based websites for my client from scratch
+                  </div>
+                  {/* JOB DATA */}
+                  <div className="p-3 text-sm text-red-400 font-semibold">
+                    2024-Jan to Present
+                  </div>
+                  {/* JOB COMPANY */}
+                  <div className="p-1 bg-white text-sm rounded-lg font-semibold w-fit">
+                    Freelancing
+                  </div>
                 </div>
               </div>
-
-              {/* RIGHT */}
-              <div className="w-1/3"></div>
-            </div>
-
-            <div className="flex justify-between h-48">
-              {/* LEFT */}
-              <div className="w-1/3"></div>
-
-              {/* CENTER */}
-              <div className="w-1/6">
-                {/* LINE */}
-                <div className=" relative w-1 h-full bg-gray-600">
-                  {/* LINE CIRCLE */}
-                  <div className="w-5 h-5 absolute ring-4 bg-white ring-red-400 rounded-full -left-2 "></div>
-                </div>
-              </div>
-
-              {/* RIGHT */}
-              <div className="w-1/3">
-                {/* JOB TITLE */}
-                <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
-                  Senior JavaScript Engineer
-                </div>
-                {/* JOB DESC */}
-                <div className="p-3 text-sm italic">
-                  led web development, offering expertise in JavaScript
-                  frameworks.
-                </div>
-                {/* JOB DATA */}
-                <div className="p-3 text-sm text-red-400 font-semibold">
-                  2024-Present
-                </div>
-                {/* JOB COMPANY */}
-                <div className="p-1 bg-white text-sm rounded-lg font-semibold w-fit">
-                  Apple
-                </div>
-              </div>
-            </div>
+            </motion.div>
           </div>
         </div>
 
