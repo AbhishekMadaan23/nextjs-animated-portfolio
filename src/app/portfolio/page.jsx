@@ -1,42 +1,45 @@
 "use client";
-
-import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
+import { useRef } from "react";
+import airbnb from "../../../airbnbSite.png";
+import crystalAromatics from "../../../crystalSite.png";
+import amr from "../../../amrSite.png";
+import wardrobe from "../../../wardrobeSite.png";
 
 const items = [
   {
     id: 1,
     color: "from-red-300 to-blue-300",
-    title: "React Commerce",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-    img: "https://images.pexels.com/photos/18073372/pexels-photo-18073372/free-photo-of-young-man-sitting-in-a-car-on-a-night-street.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    link: "https://lama.dev",
+    title: "Crystal Aromatics Official site",
+    desc: "I designed and developed a fully responsive website utilizing React.js and Tailwind CSS. This project seamlessly adapts to various screen sizes and devices, providing an optimal viewing experience for users across platforms.",
+    img: crystalAromatics,
+    link: "https://indianessentialoils.co.in",
   },
   {
     id: 2,
     color: "from-blue-300 to-violet-300",
-    title: "Next.js Medium Blog",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-    img: "https://images.pexels.com/photos/18023772/pexels-photo-18023772/free-photo-of-close-up-of-a-person-holding-a-wristwatch.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    link: "https://lama.dev",
+    title: "AMR ltd. ",
+    desc: "I spearheaded the design and development of a dynamic website using React.js and Tailwind CSS. This project boasts full responsiveness, effortlessly adjusting to diverse screen sizes and devices. Currently in the development phase",
+    img: amr,
+    link: "https://avery-metal-recycling.vercel.app/",
   },
   {
     id: 3,
     color: "from-violet-300 to-purple-300",
-    title: "Vanilla Book App",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-    img: "https://images.pexels.com/photos/6894528/pexels-photo-6894528.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    link: "https://lama.dev",
+    title: "Airbnb Clone",
+    desc: "Utilized Next.js to develop a comprehensive Airbnb clone, integrating Server-Side Rendering (SSR) for enhanced performance and SEO optimization. Employed responsive design principles to ensure seamless functionality across various devices. Implemented features mirroring Airbnb's core functionalities, including search, listing display",
+    img: airbnb,
+    link: "https://air-bnb-dun-three.vercel.app/",
   },
   {
     id: 4,
     color: "from-purple-300 to-red-300",
-    title: "Spotify Music App",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-    img: "https://images.pexels.com/photos/18540208/pexels-photo-18540208/free-photo-of-wood-landscape-water-hill.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    link: "https://lama.dev",
+    title: "E-Commerce Clothing Website",
+    desc: "I led the development of a comprehensive full-stack project, harnessing React with Styled Components for a polished frontend. By integrating React Redux for efficient state management and implementing JWT token authentication. Backend operations are powered by Node.js and Express.js, while MongoDB Atlas serves as the robust database solution",
+    img: wardrobe,
+    link: "#",
   },
 ];
 
@@ -58,7 +61,6 @@ const PortfolioPage = () => {
           My Works
         </div>
         <div className="sticky top-0 flex h-screen gap-4 items-center overflow-hidden">
-          <div className="h-screen w-screen flex items-center justify-center bg-gradient-to-r from-purple-300 to-red-300" />
           <motion.div style={{ x }} className="flex">
             <div className="h-screen w-screen flex items-center justify-center bg-gradient-to-r from-purple-300 to-red-300" />
             {items.map((item) => (
@@ -67,13 +69,13 @@ const PortfolioPage = () => {
                 key={item.id}
               >
                 <div className="flex flex-col gap-8 text-white">
-                  <h1 className="text-xl font-bold md:text-4xl lg:text-6xl xl:text-8xl">
+                  <h1 className="text-xl font-bold md:text-4xl lg:text-5xl xl:text-7xl">
                     {item.title}
                   </h1>
-                  <div className="relative w-80 h-56 md:w-96 md:h-64 lg:w-[500px] lg:h-[350px] xl:w-[600px] xl:h-[420px]">
+                  <div className="relative w-80 h-56 md:w-96 md:h-56 lg:w-[500px] lg:h-[300px] xl:w-[600px] xl:h-[360px]">
                     <Image src={item.img} alt="" fill />
                   </div>
-                  <p className="w-80 md:w96 lg:w-[500px] lg:text-lg xl:w-[600px]">
+                  <p className="w-80 md:w96 lg:w-[500px]  xl:w-[600px]">
                     {item.desc}
                   </p>
                   <Link href={item.link} className="flex justify-end">

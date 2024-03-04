@@ -105,6 +105,9 @@ const Navbar = () => {
         <Link href="https://github.com/AbhishekMadaan23">
           <Image src="/github.png" alt="" width={24} height={24} />
         </Link>
+        <Link href="https://www.linkedin.com/in/abhishek-madaan-23m/">
+          <Image src="/linkedin.png" alt="" width={24} height={24} />
+        </Link>
         <Link href="#">
           <Image src="/dribbble.png" alt="" width={24} height={24} />
         </Link>
@@ -113,9 +116,6 @@ const Navbar = () => {
         </Link>
         <Link href="#">
           <Image src="/pinterest.png" alt="" width={24} height={24} />
-        </Link>
-        <Link href="#">
-          <Image src="/linkedin.png" alt="" width={24} height={24} />
         </Link>
       </div>
 
