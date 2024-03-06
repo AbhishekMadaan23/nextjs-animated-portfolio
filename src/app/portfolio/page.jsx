@@ -39,7 +39,7 @@ const items = [
     title: "E-Commerce Clothing Website",
     desc: "I led the development of a comprehensive full-stack project, harnessing React with Styled Components for a polished frontend. By integrating React Redux for efficient state management and implementing JWT token authentication. Backend operations are powered by Node.js and Express.js, while MongoDB Atlas serves as the robust database solution",
     img: wardrobe,
-    link: "#",
+    link: "https://wardrobe-online.vercel.app/",
   },
 ];
 
