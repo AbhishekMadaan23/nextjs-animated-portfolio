@@ -23,7 +23,7 @@ const items = [
     title: "AMR ltd. ",
     desc: "I spearheaded the design and development of a dynamic website using React.js and Tailwind CSS. This project boasts full responsiveness, effortlessly adjusting to diverse screen sizes and devices. Currently in the development phase",
     img: amr,
-    link: "https://avery-metal-recycling.vercel.app/",
+    link: "https://avery--metal.vercel.app/",
   },
   {
     id: 3,
