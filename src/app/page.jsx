@@ -14,14 +14,14 @@ const Homepage = () => {
     >
       <div className="flex flex-col lg:flex-row  h-full px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
         {/* IMAGE CONTAINER */}
-        <div className="relative h-1/2 lg:h-full lg:w-1/2">
+        <div className="relative h-1/2 lg:h-full lg:w-1/2 ">
           <Image src="/hero.png" alt="" fill className="object-contain" />
         </div>
         {/* TEXT CONTAINER */}
-        <div className="h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-8 justify-center items-center">
+        <div className=" lg:h-full lg:w-1/2 flex flex-col gap-6 md:gap-8 justify-center items-center bg-red">
           {/* TITLE */}
           <div>
-            <h1 className="text-4xl  md:text-6xl font-bold">
+            <h1 className="text-3xl  md:text-6xl font-bold">
               Crafting Digital Experiences, Designing Tomorrow.
             </h1>
           </div>
@@ -38,12 +38,12 @@ const Homepage = () => {
           {/* BUTTON */}
           <div className="w-full flex gap-4">
             <Link href="/portfolio">
-              <button className="bg-black text-white rounded-lg ring-1 p-4 ring-black">
+              <button className="bg-black text-white rounded-lg ring-1 p-3 md:p-4 ring-black">
                 View My Work
               </button>
             </Link>
             <Link href="/contact">
-              <button className=" p-4 rounded-lg ring-1 ring-black">
+              <button className=" p-3 md:p-4 rounded-lg ring-1 ring-black">
                 Contact Me
               </button>
             </Link>
