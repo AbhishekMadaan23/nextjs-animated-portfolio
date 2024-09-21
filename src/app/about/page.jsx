@@ -256,6 +256,43 @@ const AboutPage = () => {
                   </div>
                 </div>
               </div>
+
+              {/* EXPERIENCE LIST ITEM */}
+              <div className="flex justify-between h-48">
+                {/* LEFT */}
+                <div className="w-1/3">
+                  {/* JOB TITLE */}
+                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
+                    Fullstack Developer
+                  </div>
+                  {/* JOB DESC */}
+                  <div className="p-3 text-sm italic">
+                    Developing innovative SaaS solutions such as Paperbot.ai and
+                    QuizIO, with a focus on end-to-end product design,
+                    development, and deployment.
+                  </div>
+                  {/* JOB DATA */}
+                  <div className="p-3 text-sm text-red-400 font-semibold">
+                    2024-April to Present
+                  </div>
+                  {/* JOB COMPANY */}
+                  <div className="p-1 bg-white text-sm rounded-lg font-semibold w-fit">
+                    Warewe Consultancy
+                  </div>
+                </div>
+
+                {/* CENTER */}
+                <div className="w-1/6">
+                  {/* LINE */}
+                  <div className=" relative w-1 h-full bg-gray-600">
+                    {/* LINE CIRCLE */}
+                    <div className="w-5 h-5 absolute ring-4 bg-white ring-red-400 rounded-full -left-2 "></div>
+                  </div>
+                </div>
+
+                {/* RIGHT */}
+                <div className="w-1/3"></div>
+              </div>
             </motion.div>
           </div>
         </div>
