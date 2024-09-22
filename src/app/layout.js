@@ -15,8 +15,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <TransitionProvider>{children}</TransitionProvider>
-        <GoogleTagManager gtmId="G-2SW6LMYEE3" />
       </body>
+      <GoogleTagManager gtmId="G-2SW6LMYEE3" />
     </html>
   );
 }
