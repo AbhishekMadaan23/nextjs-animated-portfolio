@@ -263,11 +263,11 @@ const AboutPage = () => {
                 <div className="w-1/3">
                   {/* JOB TITLE */}
                   <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
-                    Fullstack Developer
+                    Senior Software Developer
                   </div>
                   {/* JOB DESC */}
                   <div className="p-3 text-sm italic">
-                    Developing innovative SaaS solutions such as Paperbot.ai and
+                    Developing innovative SaaS solutions such as Redserp.com , shotify.ai ,Paperbot.ai and
                     QuizIO, with a focus on end-to-end product design,
                     development, and deployment.
                   </div>
