@@ -144,6 +144,24 @@ const AboutPage = () => {
               <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 JAVA
               </div>
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                Cloud Computing
+              </div>
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                Python
+              </div>
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                LangChain
+              </div>
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                OpenAI API
+              </div>
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                Next.js
+              </div>
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                SEO
+              </div>
             </motion.div>
 
             <motion.svg
@@ -273,7 +291,7 @@ const AboutPage = () => {
                   </div>
                   {/* JOB DATA */}
                   <div className="p-3 text-sm text-red-400 font-semibold">
-                    2024-April to Present
+                    2024-April to 2025-Oct
                   </div>
                   {/* JOB COMPANY */}
                   <div className="p-1 bg-white text-sm rounded-lg font-semibold w-fit">
@@ -292,6 +310,40 @@ const AboutPage = () => {
 
                 {/* RIGHT */}
                 <div className="w-1/3"></div>
+              </div>
+
+              <div className="flex justify-between h-48">
+                {/* LEFT */}
+                <div className="w-1/3"></div>
+
+                {/* CENTER */}
+                <div className="w-1/6">
+                  {/* LINE */}
+                  <div className=" relative w-1 h-full bg-gray-600">
+                    {/* LINE CIRCLE */}
+                    <div className="w-5 h-5 absolute ring-4 bg-white ring-red-400 rounded-full -left-2 "></div>
+                  </div>
+                </div>
+
+                {/* RIGHT */}
+                <div className="w-1/3">
+                  {/* JOB TITLE */}
+                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
+                    Fullstack Developer
+                  </div>
+                  {/* JOB DESC */}
+                  <div className="p-3 text-sm italic">
+                    Building fullstack applications and services.
+                  </div>
+                  {/* JOB DATA */}
+                  <div className="p-3 text-sm text-red-400 font-semibold">
+                    2025-Oct to Present
+                  </div>
+                  {/* JOB COMPANY */}
+                  <div className="p-1 bg-white text-sm rounded-lg font-semibold w-fit">
+                    Tatras Data
+                  </div>
+                </div>
               </div>
             </motion.div>
           </div>

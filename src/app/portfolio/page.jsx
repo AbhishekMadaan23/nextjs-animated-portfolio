@@ -9,10 +9,19 @@ import amr from "../../../amrSite.png";
 import wardrobe from "../../../wardrobeSite.png";
 import paperbot from "../../../Paperbot.png";
 import Redserp from "../../../Redserp.png"
+import oot from "../../../oot.png";
 
 const items = [
- {
+  {
     id: 1,
+    color: "from-red-300 to-yellow-300",
+    title: "Object Oriented Teens",
+    desc: "Object Oriented Teens is a developer-focused platform offering tech blogs, programming insights, memes, and merch for coders. It features articles on software engineering, AI, cloud computing, and modern development trends, plus community resources designed to engage and entertain developers.",
+    img: oot,
+    link: "https://objectorientedteens.com",
+  },
+  {
+    id: 2,
     color: "from-yellow-300 to-orange-300",
     title: "Redserp.com",
     desc: "I built Redserp.com, a SaaS platform that provides AI-powered SERP (Search Engine Results Page) analysis and keyword tracking for marketers and SEO professionals. I handled everything from product scoping and UI design to full-stack development, deployment, and scaling, ensuring the platform delivers real-time insights with a smooth user experience.",
@@ -20,7 +29,7 @@ const items = [
     link: "https://redserp.com",
   },
   {
-    id: 2,
+    id: 3,
     color: "from-orange-300 to-red-300",
     title: "Paperbot.ai",
     desc: "I brought a vision to life by developing an AI-powered SaaS platform, overseeing the entire process from scoping and UI design to development and deployment.",
@@ -28,7 +37,7 @@ const items = [
     link: "https://paperbot.ai",
   },
   {
-    id: 3,
+    id: 4,
     color: "from-red-300 to-blue-300",
     title: "Crystal Aromatics Official site",
     desc: "I designed and developed a fully responsive website utilizing React.js and Tailwind CSS. This project seamlessly adapts to various screen sizes and devices, providing an optimal viewing experience for users across platforms.",
@@ -36,7 +45,7 @@ const items = [
     link: "https://indianessentialoils.co.in",
   },
   {
-    id: 4,
+    id: 5,
     color: "from-blue-300 to-violet-300",
     title: "AMR ltd. ",
     desc: "I spearheaded the design and development of a dynamic website using React.js and Tailwind CSS. This project boasts full responsiveness, effortlessly adjusting to diverse screen sizes and devices. Currently in the development phase",
@@ -44,7 +53,7 @@ const items = [
     link: "https://avery--metal.vercel.app/",
   },
   {
-    id: 5,
+    id: 6,
     color: "from-violet-300 to-purple-300",
     title: "Airbnb Clone",
     desc: "Utilized Next.js to develop a comprehensive Airbnb clone, integrating Server-Side Rendering (SSR) for enhanced performance and SEO optimization. Employed responsive design principles to ensure seamless functionality across various devices. Implemented features mirroring Airbnb's core functionalities, including search, listing display",
@@ -52,7 +61,7 @@ const items = [
     link: "https://air-bnb-dun-three.vercel.app/",
   },
   {
-    id: 6,
+    id: 7,
     color: "from-purple-300 to-red-300",
     title: "E-Commerce Clothing Website",
     desc: "I led the development of a full-stack project, utilizing React with Styled Components for the frontend, React Redux for state management, JWT authentication, Node.js with Express.js for the backend, and MongoDB Atlas for the database",
@@ -65,7 +74,11 @@ const PortfolioPage = () => {
   const ref = useRef();
 
   const { scrollYProgress } = useScroll({ target: ref });
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-83%"]);
+  const totalPanels = items.length + 1;
+  const x = useTransform(scrollYProgress, [0, 1], [
+    "0%",
+    `-${(items.length / totalPanels) * 100}%`,
+  ]);
 
   return (
     <motion.div
@@ -74,7 +87,11 @@ const PortfolioPage = () => {
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
     >
-      <div className="h-[700vh] relative" ref={ref}>
+      <div
+        className="relative"
+        ref={ref}
+        style={{ height: `${totalPanels * 100}vh` }}
+      >
         <div className="w-screen h-[calc(100vh-6rem)] flex items-center justify-center text-8xl text-center">
           My Works
         </div>
